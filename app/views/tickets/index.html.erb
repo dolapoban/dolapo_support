@@ -1,0 +1,17 @@
+<div class="page_container">
+<h1>Your tickets</h2>
+  <div class="col-lg-10 col-md-10">
+  <p>
+  <%=link_to "Create new ticket", new_ticket_path ,class:"btn btn-success"%>
+</p>
+<%  if @tickets  %>
+<p>
+<%= will_paginate%>
+</p>
+<%= render 'ticket', obj: @tickets %>
+<p>
+<%= will_paginate%>
+</p>
+<% end %>
+  </div>
+</div>

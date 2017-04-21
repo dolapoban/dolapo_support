@@ -1,0 +1,35 @@
+<div class="page_container">
+<h1>All Priorities</h2>
+    <div class="col-lg-6 col-md-6">
+  <p>
+  <%=link_to "Create new priority", new_priority_path %>
+</p>
+  <table  class="table table-striped table-hover ">
+<thead>
+    <tr>
+      <th>
+        Title
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@priorities.each do |priority| %>
+    <tr>
+      <td>
+        <%=priority.title%>
+      </td>
+      <td>
+        <%=link_to "Edit", edit_priority_path(priority) %>
+        <%=link_to "Show", priority_path(priority) %>
+          <%=link_to "Delete", priority_path(priority), method: :delete, data: {confirm: "are you sure"} %>
+      </td>
+
+    </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</div>

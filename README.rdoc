@@ -1,0 +1,7 @@
+== README
+
+Open source Online Ticketing System.
+
+== License
+
+GNU GENERAL PUBLIC LICENSE V3
